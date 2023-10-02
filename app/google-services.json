@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "350107039703",
+    "project_id": "joetogo-a8940",
+    "storage_bucket": "joetogo-a8940.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350107039703:android:be4baf7e559b34523c3d92",
+        "android_client_info": {
+          "package_name": "ca.usamayarkhan.joetogo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB9cq_DeXzNvrI440_hLdEAM-rc4CgaxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
