@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">JoeToGo</string>
+    <string name="sign_in_text"><u>Sign In</u></string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="username_hint">username</string>
+    <string name="email_hint">email</string>
+    <string name="password_hint">password</string>
+    <string name="already_registered_text">Already Registered?</string>
+    <string name="coffee_cup_transparent">transparent logo</string>
 </resources>
