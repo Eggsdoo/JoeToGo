@@ -5,6 +5,7 @@
     <string name="sign_up_title">Sign Up</string>
     <string name="sign_in_title">Sign In</string>
     <string name="username_hint">username</string>
+    <string name="name_hint">name</string>
     <string name="email_hint">email</string>
     <string name="password_hint">password</string>
     <string name="already_registered_text">Already Registered?</string>

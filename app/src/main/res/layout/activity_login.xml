@@ -13,7 +13,7 @@
         android:contentDescription="@string/coffee_cup_colour"
         android:layout_width="138dp"
         android:layout_height="84dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="160dp"
         app:srcCompat="@drawable/coffee_cup_colour"/>
 
     <androidx.cardview.widget.CardView
@@ -41,7 +41,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/login_name"
+                android:id="@+id/login_username"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
@@ -51,7 +51,7 @@
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:background="@drawable/edit_text_border"
-                android:drawableEnd="@drawable/person"
+                android:drawableEnd="@drawable/person_pin"
                 android:textColor="@color/dark_brown"
                 >
             </EditText>
