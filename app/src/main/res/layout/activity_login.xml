@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/coffee_cup_colour"
+        android:contentDescription="@string/coffee_cup_colour"
+        android:layout_width="138dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="100dp"
+        app:srcCompat="@drawable/coffee_cup_colour"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in_title"
+                android:textSize="24sp"
+                android:textColor="@color/dark_brown"
+                android:textStyle="bold"
+                android:textAlignment="center">
+            </TextView>
+
+            <EditText
+                android:id="@+id/login_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:hint="@string/username_hint"
+                android:autofillHints="username"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/edit_text_border"
+                android:drawableEnd="@drawable/person"
+                android:textColor="@color/dark_brown"
+                >
+            </EditText>
+<!--            Do not need the email input-->
+<!--            <EditText-->
+<!--                android:id="@+id/signup_email"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:hint="@string/email_hint"-->
+<!--                android:inputType="textEmailAddress"-->
+<!--                android:background="@drawable/edit_text_border"-->
+<!--                android:paddingStart="20dp"-->
+<!--                android:paddingEnd="20dp"-->
+<!--                android:autofillHints="emailAddress"-->
+<!--                android:drawableEnd="@drawable/email"-->
+<!--                android:textColor="@color/dark_brown"-->
+<!--                >-->
+<!--            </EditText>-->
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_text_border"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:autofillHints="password"
+                android:drawableEnd="@drawable/lock"
+                android:textColor="@color/dark_brown"
+                >
+            </EditText>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:drawableEnd="@drawable/arrow_right"
+                android:backgroundTint="@color/dark_brown"
+                android:paddingEnd="140dp"
+                android:paddingStart="140dp">
+            </Button>
+
+            <!-- Added a Linear Layout so I could make only the "Sign In" portion of the line clickable -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/not_registered_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_registered_text"
+                    android:textColor="@color/light_brown_1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="65dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/signUpRedirectText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/sign_up_text"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_brown"
+                    android:layout_marginTop="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
