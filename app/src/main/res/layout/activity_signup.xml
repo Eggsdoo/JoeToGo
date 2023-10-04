@@ -130,7 +130,7 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/signInRedirect"
+                    android:id="@+id/signInRedirectText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
