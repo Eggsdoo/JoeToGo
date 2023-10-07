@@ -5,6 +5,7 @@ public class MenuItemClass {
     private String itemDescription;
     private double itemPrice;
 
+    // created MenuItemClass to structure data just like the HelperClass
     public MenuItemClass (String itemName, String itemDescription, double itemPrice) {
         this.itemName = itemName;
         this.itemDescription = itemDescription;

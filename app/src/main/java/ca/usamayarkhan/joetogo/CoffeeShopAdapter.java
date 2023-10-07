@@ -1,18 +1,24 @@
 package ca.usamayarkhan.joetogo;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class CoffeeShopAdapter extends RecyclerView.Adapter<CoffeeShopAdapter.ViewHolder> {
     private List<MenuItemClass> itemList;
+    private List<CartItem> cartItems;
     public CoffeeShopAdapter(List<MenuItemClass> itemList) {
         this.itemList = itemList;
+        this.cartItems = new ArrayList<>();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -47,18 +53,17 @@ public class CoffeeShopAdapter extends RecyclerView.Adapter<CoffeeShopAdapter.Vi
         holder.itemDescriptionTextView.setText(item.getItemDescription());
         holder.itemPriceTextView.setText(String.format("$%.2f", item.getItemPrice()));
 
-        // Handle button clicks here
         holder.addToCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // Implement add to cart logic here
+            public void onClick(View v) { // add to cart
+                addToCart(item);
             }
         });
 
         holder.removeFromCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // Implement remove from cart logic here
+            public void onClick(View v) { // remove from cart
+                removeFromCart(item);
             }
         });
     }
@@ -66,6 +71,36 @@ public class CoffeeShopAdapter extends RecyclerView.Adapter<CoffeeShopAdapter.Vi
     @Override
     public int getItemCount() {
         return itemList.size();
+    }
+
+    private void addToCart(MenuItemClass item) {
+        for (CartItem cartItem : cartItems) {
+            if (cartItem.getItem().getItemName().equals(item.getItemName())) {
+                cartItem.incrementQuantity();
+                notifyDataSetChanged();
+                return;
+            }
+        }
+
+        cartItems.add(new CartItem(item, 1));
+        notifyDataSetChanged();
+    }
+
+    private void removeFromCart(MenuItemClass item) {
+        for (CartItem cartItem : cartItems) {
+            if (cartItem.getItem().getItemName().equals(item.getItemName())) {
+                if (cartItem.getQuantity() > 1) {
+                    cartItem.decrementQuantity();
+                } else {
+                    cartItems.remove(cartItem);
+                }
+                notifyDataSetChanged();
+                return;
+            }
+        }
+    }
+    public List<CartItem> getCartItems() {
+        return cartItems;
     }
 }
 

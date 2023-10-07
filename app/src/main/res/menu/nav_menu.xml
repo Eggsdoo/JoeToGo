@@ -29,15 +29,15 @@
             android:title="Login"/>
 
     </group>
-
-    <item
-        android:title="">
-        <menu>
-            <item
-                android:id="@+id/nav_out"
-                android:icon="@drawable/nav_logout"
-                android:title="Log out"
-                />
-        </menu>
-    </item>
+<!--not implemented-->
+<!--    <item-->
+<!--        android:title="">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_out"-->
+<!--                android:icon="@drawable/nav_logout"-->
+<!--                android:title="Log out"-->
+<!--                />-->
+<!--        </menu>-->
+<!--    </item>-->
 </menu>

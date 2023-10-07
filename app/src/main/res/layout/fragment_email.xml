@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/light_brown_1"
     tools:context=".EmailFragment">
 
+    <!-- Title -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Email"
-        android:textSize="32sp"
-        android:gravity="center"/>
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Us!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@color/dark_brown"
+        android:layout_marginBottom="16dp"/>
 
-</FrameLayout>
+    <!-- Email Address -->
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contact@joetogo.com"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:textColor="@color/dark_brown"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Contact Text -->
+    <TextView
+        android:id="@+id/contactTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:textColor="@color/dark_brown"
+        android:text="@string/contact_text"
+        android:textSize="20sp" />
+
+</LinearLayout>

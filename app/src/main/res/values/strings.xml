@@ -27,4 +27,21 @@
     <!-- Item card -->
     <string name="add_cart">Add to Cart</string>
     <string name="remove_cart">Remove from Cart</string>
+    
+    <!-- About -->
+    <string name="about_us_text">At JoeToGo, we are passionate about providing the best coffee in town.
+        Our journey began 627 B.C.E when we set out to find coffee.
+        Our commitment to quality starts with sourcing the finest coffee beans from around the galaxy,
+        using only ethical sourcing. We roast them with care to bring out their unique flavors,
+        ensuring every cup is a delightful experience. Yum.
+        But it\'s not just about the coffee; it's about the community we've built.
+        We welcome you to join us, relax, work, or meet with friends in our cozy cave under a rock.
+        Your satisfaction is our top priority, and we can't wait to serve you the perfect cup of hot bean juice.
+        Thank you for choosing JoeToGo. Your support fuels our relentless passion,
+        and we look forward to sharing many more cups of great ground water.</string>
+
+    <!-- Email -->
+    <string name="contact_text">Feel free to reach out to us anytime with your questions,
+        feedback, or just to say hello. We love hearing from our customers!</string>
+
 </resources>
